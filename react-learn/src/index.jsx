@@ -1,38 +1,24 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import src1 from './assets/1.jpg'
-import src2 from './assets/2.jpg'
-import src3 from './assets/3.jpg'
+import MyFuncComp from './MyFuncComp'
+import MyClassComp from './MyClassComp';
 
-let index = 0; //索引
-const srcs = [src1, src2, src3]
-const container = document.getElementById('root')
-let timer = null
+// 使用组件，生成的，仍然是一个React元素，变化的，只是type值
+// function MyFuncComp(){
+//    return <h1>组件内容</h1>
+// }
+ReactDOM.render(
+  <div>
+    <MyFuncComp number="212"/>
+    <MyFuncComp number={33}/>
+    <MyFuncComp number={35}/>
 
-function render(){
-  ReactDOM.render(<img src={srcs[index]} alt="" />, container)
-}
-
-function start() {
-  stop()
-  timer = setInterval(() => {
-    index = (index + 1) % 3
-    render()
-  }, 2000)
-}
-
-function stop(){
-  clearInterval(timer)
-}
-
-render()
-start()
-
-container.onmouseenter = function(){
-  stop()
-}
-
-container.onmouseleave = function(){
-  start()
-}
+    <MyClassComp number={66} enable/>
+    <MyClassComp number={77} obj={{
+      name: '张三',
+      age: 18
+    }}/>
+    <MyClassComp number={88}  ui={<h2>这是我传递的属性</h2>}/>
+  </div>,
+  document.getElementById('root'))
 
