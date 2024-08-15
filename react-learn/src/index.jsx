@@ -1,7 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import BallList from './components/BallList'
+import TickControl from './TickControl';
 
-
-
-ReactDOM.render(<BallList />, document.getElementById('root'))
+// const btn = <button onClick={() => {console.log('点击了！！！')}} onMouseEnter={() => {
+//   console.log('鼠标移入了')
+// }}>点击我</button>
+const tc = new TickControl()
+console.log(tc)
+ReactDOM.render(<TickControl/>, document.getElementById('root'))
