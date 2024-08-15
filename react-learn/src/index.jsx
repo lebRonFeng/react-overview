@@ -1,22 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import StudentList from './components/StudentList'
+// import Tick from './components/Tick'
+import A from './components/Test'
 
-// 获取所有学生数据
-function fetchAllStudents() {
-  const stus = [
-    { address: '新疆乌鲁木齐', appkey: 'demo13_15450988', birth: 1995, ctime: 1554049415, email: '382246268@qq.com', id: 27414, name: '张楠', phone: 18897896655, sNo: '11011', sex: 1, utime: 1561472121 },
-    { address: '山东青岛', appkey: 'demo13_15450988', birth: 1995, ctime: 1554049417, email: '382246268@qq.com', id: 27415, name: '李飞', phone: 18897896655, sNo: '11012', sex: 0, utime: 1561472121 },
-    { address: '黑龙江哈尔滨市XXX', appkey: 'demo13_15450988', birth: 1995, ctime: 1554049415, email: '382246268@qq.com', id: 27416, name: '洪湖就', phone: 18897896655, sNo: '11013', sex: 1, utime: 1561472121 },
-  ]
-  return stus
-}
+// ReactDOM.render(<Tick number={10}/>, document.getElementById('root'))
 
-async function render() {
-  ReactDOM.render("正在加载中...", document.getElementById('root'))
-  const stus = fetchAllStudents(); //获取学生数组
-  ReactDOM.render(<StudentList stus={stus}/>, document.getElementById('root'))
-}
 
-render()
-
+ReactDOM.render(<A/>, document.getElementById('root'))
