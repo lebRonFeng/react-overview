@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import PagerTest from './components/PagerTest'
+import PagerGroup from './component/PagerGroup'
 
 ReactDOM.render(
-  <PagerTest />,
+  <PagerGroup />,
   document.getElementById('root')) 
