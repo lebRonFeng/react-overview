@@ -1,10 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Comp from './Comp'
-{/* <Comp html={<h1>ashasjhsah</h1>}/> */}
+import Test from './components/Test'
+
 ReactDOM.render(
   <div>
-    <Comp><h1>ashasjhsah</h1></Comp>
+    <Test/>
   </div>,
   document.getElementById('root'))
 
