@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import NewLifeCycle from './NewLifeCycle'
+import Test from './Test'
 
 export default class App extends Component {
 
@@ -10,7 +10,7 @@ export default class App extends Component {
   render(){
     return (
       <div>
-       <NewLifeCycle n={this.state.number}/>
+       <Test n={this.state.number}/>
        <p>
           <button onClick={() => {
             this.setState({
