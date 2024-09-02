@@ -1,12 +1,34 @@
 import React, { Component } from 'react'
-// import Test from './components/common/CheckBoxGroup/Test' // 多选框
-// import Test from './components/common/RadioBoxGroup/Test' // 单选框
-import Test from './components/common/Select/Test' // 下拉选择框
+import ValidationComp from './ValidationComp'
+import A from './ValidationComp'
+import Comp from './Comp'
 export default class App extends Component {
   render() {
     return (
       <div>
-        <Test/>
+        <ValidationComp
+          a={1}
+          d={'ddd'}
+          children={<Comp />}
+          F={Comp}
+          // g={new A()}
+          sex="男"
+          h={[3,5]} 
+          i={{
+            a: 233
+          }}
+          j={{
+            a: 3,
+            name: 'abc',
+            age: 44,
+            address:{
+              province: 'asdfa',
+              city: 'adsfas'
+            }
+          }}
+          k={[{name: 'asdf', age: 33}]}
+          m={23}
+          score={33}/>
       </div>
     )
   }
