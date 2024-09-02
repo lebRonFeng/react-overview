@@ -1,11 +1,23 @@
 import React, { Component } from 'react'
-
+import PropTypes from 'prop-types'
+import types from '../../../utils/commonTypes'
 
 /**
  * 一组下拉框
  */
 export default class RaioBoxGroup extends Component {
+  // 默认属性值
+  static defaulProps = {
+    datas: [],
+    value: ""
+  }
 
+  static propTypes = {
+    datas: types.groupDatas.isRequired,
+    name: PropTypes.string.isRequired,
+    value: PropTypes.string.isRequired,
+    onChange: PropTypes.func
+  }
   handleChange = e => {
     this.props.onChange && this.props.onChange(e.target.value, this.props.name, e);
   }
