@@ -5,11 +5,11 @@ export default class Test extends Component {
 
   state = {
     datas: [
-      { value: 'football', text: '足球' },
-      { value: 'basketball', text: '篮球' },
-      { value: 'movie', text: '电影' }
+      { value: 'zs', text: '张三' },
+      { value: 'ls', text: '李四' },
+      { value: 'ww', text: '王五' }
     ],
-    chooseDatas: ['football']
+    chooseDatas: []
   }
 
   async componentDidMount(){
