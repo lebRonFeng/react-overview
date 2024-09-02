@@ -1,10 +1,15 @@
 import React, { Component } from 'react'
-import Test from './components/common/Select/Test'
+import {A, B} from './components/Comps';
+import withLog from './HOC/withLog'
+import withLogin from './HOC/withLogin'
+let AComp = withLogin(withLog(A, 'asd'))
+let BComp = withLogin(withLog(B, 'kkk'))
 export default class App extends Component {
   render() {
     return (
       <div>
-       <Test/>
+        <AComp isLogin a={1}/>
+        <BComp isLogin b={1}/>
       </div>
     )
   }
